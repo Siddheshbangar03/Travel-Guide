@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(255, 166, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    position: static;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #111;
+    background: #fff;
+}
+
+nav .menu-btn i {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        padding: 0 40px 0 50px;
+    }
+}
+
+@media (max-width: 920px) {
+    nav .menu-btn i {
+        display: block;
+    }
+
+    #click:checked~.menu-btn i:before {
+        content: "\f00d";
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    #click:checked~ul li a {
+        margin-left: 0px;
+    }
+
+    nav ul li a:hover {
+        background: none;
+        color: cyan;
+    }
+}
+
+
+
+
+
+
+body {
+    background-color:black
+    font-family: sans-serif;
+}
+
+.flexone {
+    flex: 1;
+}
+
+.groups {
+    margin: 0 auto;
+    width: 1000px;
+    
+    padding: 40px;
+    height: 75px;
+}
+.groups li {
+    position: relative;
+    list-style: none;
+    /*background-image: url(images/back_img);*/
+    background: radial-gradient(yellow,white);
+    background-size: 100%;
+    background-origin: content-box;
+    border-radius: 25px;
+    box-shadow: 0 3px 4px 0 #0001;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: all 0.3s;
+}
+
+.groups li:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 14px 0 #0005;
+}
+
+.groups .card {
+    overflow: hidden;
+    display: block;
+}
+
+.groups .image-session {
+    float: left;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.groups .image-session .image {
+    width: 280px;
+    height: 220px;
+    display: block;
+    background-size: cover;
+    background-position: center;
+}
+
+.groups .meta-sission {
+    position: relative;
+    padding: 15px;
+    display: block;
+    height: 220px;
+}
+
+.groups .meta-sission .head {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.groups .meta-sission .head .catogry {
+    list-style: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0075ff;
+}
+
+.meta-sission .head .per span,
+.meta-sission .head .per input {
+    display: block;
+    font-size: 10px;
+    text-align: right;
+}
+
+.meta-sission .head .per input {
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 5px;
+    background: #0001;
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+
+.meta-sission .head .per input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0;
+    box-shadow: -100px 0 0 100px #0075ff;
+}
+
+.groups .body .title {
+    height: 60px;
+    overflow: hidden;
+    font-size: 24px;
+}
+
+.groups .body .desc {
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-size: 13px;
+    
+}
+
+.groups .footer .button {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    background: #0075ff;
+    color: #fff;
+    line-height: 2.2;
+    padding: 0 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 1px 6px 0 #0004;
+    transition: all 0.3s;
+}
+
+.groups .footer .button:hover {
+    box-shadow: 0 3px 8px 0 #0005;
+    background: #1e3b60;
+    right: 15px;
+}
+
+.groups .footer .views {
+    display: block;
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+@media screen and (max-width:780px) {
+    .groups {
+        width: 96%;
+    }
+
+    .groups li:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .groups .image-session {
+        float: none;
+        margin-right: 0;
+    }
+
+    .groups .image-session .image {
+        width: 100%;
+    }
+}

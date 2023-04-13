@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>Login and Registration form - Travel Guide</title>
+    <link rel="stylesheet" href="log_in.css">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="C:\Users\Riya\Desktop\New folder\fb.png">
+                <img src="C:\Users\Riya\Desktop\New folder\tw.png">
+                <img src="C:\Users\Riya\Desktop\New folder\gp.png">
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="chech-box"><span>Remmember Password</span>
+                <button type="submit" class="submit-btn">LogIn</button>
+
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <input type="checkbox" class="chech-box"><span>I agree to terms & conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+
+            </form>
+            <section class="book-form" id="book-form">
+
+                <form action="">
+                    <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
+                        <span>where to?</span>
+                        <input type="text" placeholder="place name" value="">
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
+                        <span>when?</span>
+                        <input type="date" value="">
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
+                        <span>how many?</span>
+                        <input type="number" placeholder="number of travelers" value="">
+                    </div>
+                    <input data-aos="zoom-in" data-aos-delay="600" type="submit" value="find now" class="btn">
+                </form>
+
+            </section>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+    </script>
+</body>
+
+</html>
